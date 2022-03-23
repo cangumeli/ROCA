@@ -1,0 +1,47 @@
+[
+    {
+        "name": "bed",
+        "nyud": ["bed"],
+        "shapenet": "02818832"
+    },
+    {
+        "name": "sofa",
+        "nyud": ["sofa", "chair"],
+        "shapenet": "04256520"
+    },
+    {
+        "name": "chair",
+        "nyud": ["chair", "toilet", "sofa"],
+        "shapenet": "03001627"
+    },
+    {
+        "name": "bin",
+        "nyud": ["otherfurniture"],
+        "shapenet": "02747177"
+    },
+    {
+        "name": "cabinet",
+        "nyud": ["cabinet", "fridge"],
+        "shapenet": "02933112"
+    },
+    {
+        "name": "display",
+        "nyud": ["television"],
+        "shapenet": "03211117"
+    },
+    {
+        "name": "table",
+        "nyud": ["table", "otherfurniture"],
+        "shapenet": "04379243"
+    },
+    {
+        "name": "bookcase",
+        "nyud": ["bookshelf"],
+        "shapenet": "02871439"
+    },
+    {
+        "name": "bathtub",
+        "nyud": ["bathtub"],
+        "shapenet": "02808440"
+    }
+]
