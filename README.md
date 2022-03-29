@@ -13,6 +13,8 @@ If you find our paper or this repository helpful, please cite:
 }
 ```
 
+Also, check out our video [here](https://www.youtube.com/watch?v=eNANbgKotHU)!
+
 ## Development Environment
 We use the following development environment for this project:
 - Nvidia RTX 3090 GPU
