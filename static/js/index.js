@@ -80,10 +80,10 @@ $(document).ready(function() {
 var currentCount = 0;
 
 var meshLinks = [
-  "https://github.com/cangumeli/ROCA/blob/website/static/meshes/mesh_3m.glb",
-  "https://github.com/cangumeli/ROCA/blob/website/static/meshes/mesh_sofa.glb",
-  "https://github.com/cangumeli/ROCA/blob/website/static/meshes/mesh_desk.glb",
-  "https://github.com/cangumeli/ROCA/blob/website/static/meshes/mesh_lab.glb",
+  "static/meshes/mesh_3m.glb",
+  "static/meshes/mesh_sofa.glb",
+  "static/meshes/mesh_desk.glb",
+  "static/meshes/mesh_lab.glb",
 ];
 var imageLinks = [
   "https://raw.githubusercontent.com/cangumeli/ROCA/main/network/assets/3m.jpg",
