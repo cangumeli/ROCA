@@ -77,8 +77,7 @@ $(document).ready(function() {
 
 })
 
-var currentCount = -1
-
+var currentCount = 0;
 var meshLinks = [
   "static/meshes/mesh_sofa.glb",
   "static/meshes/mesh_desk.glb",
@@ -90,14 +89,12 @@ var imageLinks = [
   "https://raw.githubusercontent.com/cangumeli/ROCA/main/network/assets/desk.jpg",
   "https://raw.githubusercontent.com/cangumeli/ROCA/main/network/assets/3m.jpg",
   "https://raw.githubusercontent.com/cangumeli/ROCA/main/network/assets/lab.jpg",
-]
-
+];
 
 function switchToNext() {
   currentCount++;
   currentCount = currentCount % meshLinks.length;
   var address = meshLinks[currentCount];
-  console.log(currentCount, address);
   document.getElementById('inputImage').src = imageLinks[currentCount];
   document.getElementById('viewer3D').src = address;
 }
@@ -112,11 +109,15 @@ function switchToPrev() {
   console.log(currentCount, address);
   document.getElementById('inputImage').src = imageLinks[currentCount];
   document.getElementById('viewer3D').src = address;
+  document.getElementById('viewer3DMobile').src = address;
 }
 
 window.onload = () => {
   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
     document.getElementById('videoSpan').hidden = true;
-   }
-   switchToNext();
+    document.getElementById('demoDesktop').hidden = true;
+    document.getElementById('demoMobile').hidden = false;
+    document.getElementById('userMessage').innerHTML = "The interactive mesh viewer should appear at the bottom";
+  }
+  // switchToNext();
 }

@@ -96,7 +96,7 @@
             <span class="author-block">
               <a href="https://www.3dunderstanding.org/">Angela Dai</a>,</span>
             <span class="author-block">
-              <a href="https://www.niessnerlab.org/">Matthias Niessner</a>,
+              <a href="https://www.niessnerlab.org/">Matthias Niessner</a>
             </span>
           </div>
 
@@ -279,6 +279,8 @@
           This is an interactive example showing sample smartphone images. Use Next and Previous buttons to see different examples. 
         </p>
         <p>You can view the mesh from different viewpoints using your using your mouse or finger. Camera is also visualized in gray color to provide a frame of reference. </p>
+
+        <p><b id="userMessage">The interactive mesh viewer should appear on the right</b>. Note that it may take a few seconds to load the mesh. </p>
       </div>
         <div id="nextButton" >
           <button id="prevButtonButton" onclick="switchToNext()">
@@ -291,22 +293,29 @@
     </div>
     </div>
   </div>
-  <div class="container is-max-desktop content">
+  <div class="container is-max-desktop content" id="demoDesktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-6">
         <img src="https://raw.githubusercontent.com/cangumeli/ROCA/main/network/assets/sofa.jpg" id="inputImage"/>
       </div>
       <div class="column is-6">
-        <model-viewer id="viewer3D" class="canvas" src="" ar ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral" bounds="tight" poster="poster.webp" shadow-intensity="1">
+        <model-viewer id="viewer3D" class="canvas" src="static/meshes/mesh_sofa.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral" bounds="tight" poster="poster.webp" shadow-intensity="1">
           <div class="progress-bar hide" slot="progress-bar">
             <div class="update-bar"></div>
           </div>
-          <button slot="ar-button" id="ar-button">
-            View in your space
-          </button>
         </model-viewer>
+      </div>
     </div>
-    </div>
+  </div>
+
+  <div class="container is-max-desktop content" id="demoMobile" hidden>
+      <img src="https://raw.githubusercontent.com/cangumeli/ROCA/main/network/assets/sofa.jpg" id="inputImage"/>
+      <br />
+      <model-viewer id="viewer3DMobile" class="canvas" bounds="tight" src="static/meshes/mesh_sofa.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral" poster="poster.webp" shadow-intensity="1">
+          <div class="progress-bar hide" slot="progress-bar">
+              <div class="update-bar"></div>
+          </div>
+      </model-viewer>
   </div>
 </section>
 
