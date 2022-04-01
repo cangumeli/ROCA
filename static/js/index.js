@@ -97,6 +97,8 @@ function switchToNext() {
   var address = meshLinks[currentCount];
   document.getElementById('inputImage').src = imageLinks[currentCount];
   document.getElementById('viewer3D').src = address;
+  document.getElementById('inputImageMobile').src = imageLinks[currentCount];
+  document.getElementById('viewer3DMobile').src = address;
 }
 
 function switchToPrev() {
@@ -109,6 +111,7 @@ function switchToPrev() {
   console.log(currentCount, address);
   document.getElementById('inputImage').src = imageLinks[currentCount];
   document.getElementById('viewer3D').src = address;
+  document.getElementById('inputImageMobile').src = imageLinks[currentCount];
   document.getElementById('viewer3DMobile').src = address;
 }
 
