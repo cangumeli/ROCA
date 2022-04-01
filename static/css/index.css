@@ -166,14 +166,14 @@ body {
 }
 
 #viewer3DMobile {
-  height: 480px;
+  height: 320px;
   margin-bottom: 0px;
   padding-bottom: 0px;
 }
 
 #shortVideo {
-  /*width: 100%;*/
-  height: 320px;
+  width: 100%;
+  height: 480px;
   margin-top: 0px;
   padding-top: 0px;
 }
