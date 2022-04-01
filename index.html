@@ -92,16 +92,16 @@
           <h1 class="title is-1 publication-title">ROCA: Robust CAD Model Alignment and Retrieval from a Single Image</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://www.niessnerlab.org/members/can_guemeli/profile.html">Can Gümeli</a><sup>1</sup>,</span>
+              <a href="https://www.niessnerlab.org/members/can_guemeli/profile.html">Can Gümeli,</span>
             <span class="author-block">
-              <a href="https://www.3dunderstanding.org/">Angela Dai</a><sup>1</sup>,</span>
+              <a href="https://www.3dunderstanding.org/">Angela Dai</a>,</span>
             <span class="author-block">
-              <a href="https://www.niessnerlab.org/">Matthias Niessner</a><sup>1</sup>,
+              <a href="https://www.niessnerlab.org/">Matthias Niessner</a>,
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Technical University of Munich</span>
+            <span class="author-block">Technical University of Munich</span>
           </div>
 
           <div class="column has-text-centered">
@@ -159,11 +159,13 @@
 <section class="hero teaser">
   <div class="container is-max-desktop is-centered has-text-centered">
     <div class="hero-body">
-      <video  autoplay muted loop id="shortVideo">
-        <source src="./static/videos/overlay_new.mp4"
-                type="video/mp4">
-      </video>
-      <br /><br /><br />
+      <span id="videoSpan">
+        <video autoplay muted loop id="shortVideo">
+          <source src="./static/videos/overlay_new.mp4"
+                  type="video/mp4">
+        </video>
+      <br /><br />
+      </span>
       <img src="https://www.niessnerlab.org/papers/2022/3roca/teaser.jpg" />
       <br />
       <h2 class="subtitle has-text-centered">
@@ -276,26 +278,35 @@
         <p>
           This is an interactive example showing sample smartphone images. Use Next and Previous buttons to see different examples. 
         </p>
-        <p>You can view the mesh from different viewpoints using your using your mouse or finger. Camera is also visualized in gray color to provide a frame of reference</p>
+        <p>You can view the mesh from different viewpoints using your using your mouse or finger. Camera is also visualized in gray color to provide a frame of reference. </p>
       </div>
-      <br \>
         <div id="nextButton" >
-          <button id="nextButtonButton" onclick="switchToNext()">
-            Previous
+          <button id="prevButtonButton" onclick="switchToNext()">
+            Previous Image
           </button>
           <button id="nextButtonButton" onclick="switchToPrev()">
-            Next
+            Next Image
           </button>
         </div>
-        <br />
-      <img src="https://raw.githubusercontent.com/cangumeli/ROCA/main/network/assets/sofa.jpg" id="inputImage"/>
-      <model-viewer id="viewer3D" class="canvas" bounds="tight" src="static/meshes/mesh_sofa.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral" poster="poster.webp" shadow-intensity="1">
-          <div class="progress-bar hide" slot="progress-bar">
-              <div class="update-bar"></div>
-          </div>
-      </model-viewer>
+    </div>
     </div>
   </div>
+  <div class="container is-max-desktop content">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-6">
+        <img src="https://raw.githubusercontent.com/cangumeli/ROCA/main/network/assets/sofa.jpg" id="inputImage"/>
+      </div>
+      <div class="column is-6">
+        <model-viewer id="viewer3D" class="canvas" src="" ar ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral" bounds="tight" poster="poster.webp" shadow-intensity="1">
+          <div class="progress-bar hide" slot="progress-bar">
+            <div class="update-bar"></div>
+          </div>
+          <button slot="ar-button" id="ar-button">
+            View in your space
+          </button>
+        </model-viewer>
+    </div>
+    </div>
   </div>
 </section>
 

@@ -77,7 +77,7 @@ $(document).ready(function() {
 
 })
 
-var currentCount = 0;
+var currentCount = -1
 
 var meshLinks = [
   "static/meshes/mesh_sofa.glb",
@@ -112,4 +112,11 @@ function switchToPrev() {
   console.log(currentCount, address);
   document.getElementById('inputImage').src = imageLinks[currentCount];
   document.getElementById('viewer3D').src = address;
+}
+
+window.onload = () => {
+  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    document.getElementById('videoSpan').hidden = true;
+   }
+   switchToNext();
 }
