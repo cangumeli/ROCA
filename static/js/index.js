@@ -94,11 +94,10 @@ var imageLinks = [
 function switchToNext() {
   currentCount++;
   currentCount = currentCount % meshLinks.length;
-  var address = meshLinks[currentCount];
   document.getElementById('inputImage').src = imageLinks[currentCount];
-  document.getElementById('viewer3D').src = address;
+  document.getElementById('viewer3D').src = meshLinks[currentCount];
   document.getElementById('inputImageMobile').src = imageLinks[currentCount];
-  document.getElementById('viewer3DMobile').src = address;
+  document.getElementById('viewer3DMobile').src = meshLinks[currentCount];
 }
 
 function switchToPrev() {
@@ -106,18 +105,17 @@ function switchToPrev() {
   if (currentCount < 0) {
     currentCount += meshLinks.length;
   }
-  // currentCount = currentCount % meshLinks.length;
-  var address = meshLinks[currentCount];
-  console.log(currentCount, address);
   document.getElementById('inputImage').src = imageLinks[currentCount];
-  document.getElementById('viewer3D').src = address;
+  document.getElementById('viewer3D').src = meshLinks[currentCount];
   document.getElementById('inputImageMobile').src = imageLinks[currentCount];
-  document.getElementById('viewer3DMobile').src = address;
+  document.getElementById('viewer3DMobile').src = meshLinks[currentCount];
 }
 
 window.onload = () => {
   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-    document.getElementById('videoSpan').hidden = true;
+    // document.getElementById('videoSpan').hidden = true;
+    document.getElementById('shortVideo').hidden = true;
+    document.getElementById('shortVideoMobile').hidden = false;
     document.getElementById('demoDesktop').hidden = true;
     document.getElementById('demoMobile').hidden = false;
     document.getElementById('userMessage').innerHTML = "The interactive mesh viewer should appear at the bottom";

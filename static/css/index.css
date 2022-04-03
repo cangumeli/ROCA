@@ -179,6 +179,18 @@ body {
   padding-top: 0px;
 }
 
+#shortVideoMobile {
+  width: 100%;
+  height: 200px;
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+#videoSpan {
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
 #nextButton {
   text-align: center;
 }
