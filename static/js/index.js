@@ -117,10 +117,9 @@ window.onload = () => {
     /*document.getElementById('shortVideo').hidden = true;
     document.getElementById('shortVideoMobile').src = document.getElementById('shortVideo').src;
     document.getElementById('shortVideoMobile').hidden = false;*/
-    document.getElementById('shortVideo').autoplay = false;
+    /*document.getElementById('shortVideo').autoplay = false;
     document.getElementById('shortVideo').loop = false;
-    document.getElementById('shortVideo').controls = false;
-
+    document.getElementById('shortVideo').controls = false;*/
     document.getElementById('demoDesktop').hidden = true;
     document.getElementById('demoMobile').hidden = false;
     document.getElementById('userMessage').innerHTML = "The interactive mesh viewer should appear at the bottom";
