@@ -26,7 +26,7 @@ We use the following development environment for this project:
 - Detectron2 0.3
 
 ## Installation
-This code is developed using anaconda3 with Python 3.8, therefore we recommend a similar setup.
+This code is developed using anaconda3 with Python 3.8 ([download here](https://repo.anaconda.com/archive/Anaconda3-2021.05-Linux-x86_64.sh)), therefore we recommend a similar setup.
 
 You can simply run the following code in the command line to create the development environment:
 ```
