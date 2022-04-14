@@ -43,14 +43,14 @@ We provide four sample input images in `network/assets` folder. The images are c
 Assuming contents of the `Models` directory are in `$MODEL_DIR` and contents of the `Data` directory are in `$DATA_DIR`, you can run:
 ```
 $ cd network
-$ python demo.py --model_file $MODEL_DIR/model_best.pth --data_dir $DATA_DIR/Dataset --config_file $MODEL_DIR/config.yaml
+$ python demo.py --model_path $MODEL_DIR/model_best.pth --data_dir $DATA_DIR/Dataset --config_path $MODEL_DIR/config.yaml
 ```
 You will see image overlay and CAD visualization are displayed one by one. Open3D mesh visualization is an interactive window where you can see geometries from different viewpoints.
 Close the Open3D window to continue to the next visualization. You will see similar results to the image above.
 
 For headless visualization, you can specify an output directory where resulting images and meshes are placed:
 ```
-$ python demo.py --model_file $MODEL_DIR/model_best.pth --data_dir $DATA_DIR/Dataset --config_file $MODEL_DIR/config.yaml --output_folder $OUTPUT_DIR
+$ python demo.py --model_path $MODEL_DIR/model_best.pth --data_dir $DATA_DIR/Dataset --config_path $MODEL_DIR/config.yaml --output_dir $OUTPUT_DIR
 ```
 
 You may use the `--wild` option to visualize results with "wild retrieval". Note that we omit the `table` category in this case due to large size diversity.
