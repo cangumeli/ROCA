@@ -162,7 +162,7 @@ def voxelize_nocs(points_list: List[Tensor], grid_size = 32) -> Tensor:
         volumes = add_pointclouds_to_volumes(points, volumes)
         voxels = volumes.densities()
     except ValueError:
-        assert feats.numel() == 0
+        assert len(feats) == 0
     # Normalize volumes
     # TODO: Try alternatives
     voxels = voxels / voxels.sum((2, 3, 4), keepdim=True).clamp(1e-5)
