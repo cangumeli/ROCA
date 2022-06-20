@@ -147,8 +147,11 @@ def pad_points(
     return x, mask
 
 
-def voxelize_nocs(points_list: List[Tensor], grid_size = 32) -> Tensor:
-    # Create volumes
+def voxelize_nocs(points_list: List[Tensor], grid_size: int = 32) -> Tensor:
+    points_list = [
+        pts if pts.numel() > 0 else torch.zeros(1, 3, device=pts.device)
+        for pts in points_list
+    ]
     feats = [torch.ones(p.size(0), 1, device=p.device) for p in points_list]
     points = Pointclouds(points_list, features=feats)
 
@@ -158,13 +161,10 @@ def voxelize_nocs(points_list: List[Tensor], grid_size = 32) -> Tensor:
         voxel_size=(1 / (grid_size - 1)),
         features=torch.zeros(volume_size, device=points.device)
     )
-    try:
-        volumes = add_pointclouds_to_volumes(points, volumes)
-        voxels = volumes.densities()
-    except ValueError:
-        assert len(feats) == 0
+    volumes = add_pointclouds_to_volumes(points, volumes)
     # Normalize volumes
     # TODO: Try alternatives
+    voxels = volumes.densities()
     voxels = voxels / voxels.sum((2, 3, 4), keepdim=True).clamp(1e-5)
 
     return voxels
