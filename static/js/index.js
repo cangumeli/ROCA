@@ -5,6 +5,7 @@ var NUM_INTERP_FRAMES = 240;
 
 var interp_images = [];
 function preloadInterpolationImages() {
+  return null;
   for (var i = 0; i < NUM_INTERP_FRAMES; i++) {
     var path = INTERP_BASE + '/' + String(i).padStart(6, '0') + '.jpg';
     interp_images[i] = new Image();
@@ -13,6 +14,7 @@ function preloadInterpolationImages() {
 }
 
 function setInterpolationImage(i) {
+  return null;
   var image = interp_images[i];
   image.ondragstart = function() { return false; };
   image.oncontextmenu = function() { return false; };
@@ -21,6 +23,7 @@ function setInterpolationImage(i) {
 
 
 $(document).ready(function() {
+    return null;
     // Check for click events on the navbar burger icon
     $(".navbar-burger").click(function() {
       // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
