@@ -1,5 +1,5 @@
 # ROCA: Robust CAD Model Alignment and Retrieval from a Single Image (CVPR 2022)
-Code release of our paper [ROCA](https://niessnerlab.org/projects/guemeli2021roca.html). Check out our
+Code release of our paper [ROCA](https://cangumeli.github.io/ROCA/). Check out our
  [video](https://www.youtube.com/watch?v=eNANbgKotHU), [paper](https://openaccess.thecvf.com/content/CVPR2022/html/Gumeli_ROCA_Robust_CAD_Model_Retrieval_and_Alignment_From_a_Single_CVPR_2022_paper.html), and [website](https://cangumeli.github.io/ROCA/)!
 
 ![](https://niessnerlab.org/papers/2022/3roca/teaser.jpg)
